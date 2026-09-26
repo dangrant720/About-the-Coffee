@@ -1,1 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <title>About the Coffee</title>
+
+  <style>
+    :root {
+      --green: #173b32;
+      --orange: #cf8b48;
+      --blue: #568b96;
+      --cream: #faf8f2;
+      --white: #ffffff;
+      --text: #30443e;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background: var(--cream);
+      color: var(--green);
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.6;
+    }
+
+    nav {
+      padding: 22px 7%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: var(--cream);
+    }
+
+    .brand {
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      font-size: 13px;
+    }
+
+    nav a {
+      color: var(--green);
+      text-decoration: none;
+      margin-left: 20px;
+      font-size: 13px;
+    }
+
+    .hero {
+      min-height: 78vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 80px 8%;
+    }
+
+    .hero-content {
+      max-width: 850px;
+    }
+
+    .logo-placeholder {
+      margin-bottom: 45px;
+    }
+
+    .logo-placeholder .about {
+      font-family: Georgia, serif;
+      font-style: italic;
+      font-size: clamp(65px, 14vw, 125px);
+      line-height: .8;
+    }
+
+    .logo-placeholder .the {
+      color: var(--orange);
+      letter-spacing: 8px;
+      font-weight: bold;
+      margin: 18px 0 5px;
+    }
+
+    .logo-placeholder .coffee {
+      font-size: clamp(35px, 8vw, 72px);
+      letter-spacing: 12px;
+      font-weight: 300;
+    }
+
+    h1 {
+      font-family: Georgia, serif;
+      font-weight: 400;
+      font-size: clamp(30px, 5vw, 48px);
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      max-width: 650px;
+      margin: auto;
+      font-family: Georgia, serif;
+      font-size: 19px;
+      color: var(--text);
+    }
+
+    section {
+      padding: 90px 9%;
+    }
+
+    .story {
+      background: var(--white);
+    }
+
+    .story-inner {
+      max-width: 1050px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: 1fr 1.3fr;
+      gap: 70px;
+    }
+
+    .eyebrow {
+      color: var(--orange);
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      font-size: 12px;
+      font-weight: bold;
+    }
+
+    h2 {
+      font-family: Georgia, serif;
+      font-weight: 400;
+      font-size: clamp(35px, 5vw, 55px);
+      line-height: 1.1;
+      margin: 12px 0 25px;
+    }
+
+    .story p {
+      font-family: Georgia, serif;
+      color: var(--text);
+      font-size: 18px;
+    }
+
+    .coffee-life {
+      background: var(--green);
+      color: var(--cream);
+      text-align: center;
+      padding: 100px 8%;
+    }
+
+    .coffee-life h2 {
+      font-size: clamp(48px, 8vw, 80px);
+      margin-bottom: 15px;
+    }
+
+    .coffee-life p {
+      max-width: 650px;
+      margin: auto;
+      color: #e8dfcf;
+      font-family: Georgia, serif;
+      font-size: 18px;
+    }
+
+    .why {
+      max-width: 900px;
+      margin: auto;
+      text-align: center;
+    }
+
+    .why p {
+      color: var(--text);
+      font-family: Georgia, serif;
+      font-size: 19px;
+    }
+
+    .journey {
+      background: #f1ece2;
+      text-align: center;
+    }
+
+    .map {
+      max-width: 950px;
+      min-height: 350px;
+      margin: 40px auto 0;
+      border: 1px solid #d5ccbc;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 30px;
+    }
+
+    .map p {
+      font-family: Georgia, serif;
+      font-style: italic;
+      color: var(--text);
+    }
+
+    footer {
+      background: var(--cream);
+      text-align: center;
+      padding: 50px 20px;
+      font-size: 12px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    footer span {
+      color: var(--orange);
+    }
+
+    @media (max-width: 700px) {
+      nav .links {
+        display: none;
+      }
+
+      .story-inner {
+        grid-template-columns: 1fr;
+        gap: 15px;
+      }
+
+      section {
+        padding: 70px 7%;
+      }
+
+      .logo-placeholder .coffee {
+        letter-spacing: 7px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<nav>
+  <div class="brand">About the Coffee</div>
+
+  <div class="links">
+    <a href="#story">Our Story</a>
+    <a href="#why">Why Coffee</a>
+    <a href="#explore">Explore</a>
+  </div>
+</nav>
+
+
+<header class="hero">
+
+  <div class="hero-content">
+
+    <div class="logo-placeholder">
+      <div class="about">About</div>
+      <div class="the">— THE —</div>
+      <div class="coffee">COFFEE</div>
+    </div>
+
+    <h1>It was never just about the coffee.</h1>
+
+    <p>
+      It's about where it takes us, the places we discover,
+      and the moments that remind us to slow down and experience
+      what's right in front of us.
+    </p>
+
+  </div>
+
+</header>
+
+
+<section class="story" id="story">
+
+  <div class="story-inner">
+
+    <div>
+      <div class="eyebrow">Our Story</div>
+
+      <h2>
+        Somewhere between going and staying.
+      </h2>
+    </div>
+
+    <div>
+
+      <p>
+        Coffee has always been part of our lives. Over time,
+        visiting coffee shops became something more — a reason
+        to explore somewhere new, slow the pace, and spend
+        uninterrupted time together.
+      </p>
+
+      <p>
+        For him, life is usually moving. Skiing, watersports,
+        camping, hiking, biking, running, travel and more hobbies
+        than anyone could reasonably keep track of.
+        A Managing Director by day and unwind seeker by nature,
+        slowing down hasn't always come naturally.
+      </p>
+
+      <p>
+        Coffee became part of that balance. A café at the end
+        of a bike ride. A great shop discovered while traveling.
+        A quiet cup after a morning outside. Sometimes the shop
+        is the destination. Sometimes it's where the next
+        adventure begins.
+      </p>
+
+      <p>
+        Together, these small trips became a way of reconnecting —
+        choosing experiences built around conversation,
+        exploration, well-being and simply being present.
+      </p>
+
+      <p>
+        Traveling into the countryside of the Dominican Republic
+        deepened an appreciation that was already there. Seeing
+        the land, people and process behind coffee gave us a new
+        respect for the remarkable journey a bean takes before
+        reaching the cup in front of us.
+      </p>
+
+      <p>
+        That's what inspired <strong>About the Coffee.</strong>
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<section class="coffee-life">
+
+  <div class="eyebrow">Our Philosophy</div>
+
+  <h2>Coffee is life.</h2>
+
+  <p>
+    Not because we can't function without it.
+    Because coffee begins with life — and has an incredible
+    way of creating moments of it.
+  </p>
+
+</section>
+
+
+<section class="why" id="why">
+
+  <div class="eyebrow">Why Coffee</div>
+
+  <h2>The cup is only the beginning.</h2>
+
+  <p>
+    We're exploring independent coffee shops for the whole
+    experience: the quality of the coffee, the story of the beans,
+    the people behind the counter, the character of the space,
+    and the feeling of finding somewhere worth staying awhile.
+  </p>
+
+  <p>
+    This is our journal of those places — and the journeys
+    that lead us there.
+  </p>
+
+</section>
+
+
+<section class="journey" id="explore">
+
+  <div class="eyebrow">The Journey</div>
+
+  <h2>Explore the places behind the cups.</h2>
+
+  <p>
+    Coffee shops, road stops and memorable cups —
+    starting in New Jersey and following wherever the journey leads.
+  </p>
+
+  <div class="map">
+    <p>
+      Our interactive coffee map is coming next.
+    </p>
+  </div>
+
+</section>
+
+
+<footer>
+
+  ABOUT THE COFFEE &nbsp; • &nbsp;
+  <span>COFFEE IS LIFE</span>
+  &nbsp; • &nbsp; EST. 2026
+
+</footer>
+
+
+</body>
+</html>
